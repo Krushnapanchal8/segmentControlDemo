@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="segmentControlDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="tL2-Yo-hLZ">
+                                <rect key="frame" x="20" y="60" width="374" height="32"/>
+                                <segments>
+                                    <segment title="Football"/>
+                                    <segment title="Games"/>
+                                    <segment title="Hockey"/>
+                                    <segment title="Kabbadi"/>
+                                </segments>
+                                <connections>
+                                    <action selector="valueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="EFW-7N-Xyc"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1d1-n4-4U9">
+                                <rect key="frame" x="20" y="407" width="374" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="football" translatesAutoresizingMaskIntoConstraints="NO" id="PFG-bZ-uK3">
+                                <rect key="frame" x="20" y="121" width="374" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="eRH-ba-7rT"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PFG-bZ-uK3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1HA-ok-a5a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1d1-n4-4U9" secondAttribute="trailing" constant="20" id="5UM-Mg-2tk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tL2-Yo-hLZ" secondAttribute="trailing" constant="20" id="9JB-zG-vQ8"/>
+                            <constraint firstItem="1d1-n4-4U9" firstAttribute="top" secondItem="PFG-bZ-uK3" secondAttribute="bottom" constant="30" id="CYo-w5-Br4"/>
+                            <constraint firstItem="1d1-n4-4U9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Cqr-kw-8kO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PFG-bZ-uK3" secondAttribute="trailing" constant="20" id="QMc-te-MX1"/>
+                            <constraint firstItem="1d1-n4-4U9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="VUk-5y-WN2"/>
+                            <constraint firstItem="tL2-Yo-hLZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="XA1-Si-4LA"/>
+                            <constraint firstItem="PFG-bZ-uK3" firstAttribute="top" secondItem="tL2-Yo-hLZ" secondAttribute="bottom" constant="30" id="i4Q-4Y-reH"/>
+                            <constraint firstItem="PFG-bZ-uK3" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="375:896" id="ix8-0b-cQE"/>
+                            <constraint firstItem="tL2-Yo-hLZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rQp-ut-VOc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgView" destination="PFG-bZ-uK3" id="Xk2-j0-NKx"/>
+                        <outlet property="labl" destination="1d1-n4-4U9" id="YUO-6o-4uY"/>
+                        <outlet property="segment" destination="tL2-Yo-hLZ" id="XEP-K2-Kts"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-308.70535714285711" y="-246.37681159420291"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="football" width="275" height="183"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
